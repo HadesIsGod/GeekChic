@@ -1,10 +1,6 @@
-// ProductPage.js
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useProducts } from '../contexts/products/ProductContext'
-import tshirt from '../images/example.jpeg'
-
-
 
 function Product() {
   const products = useProducts();
@@ -15,41 +11,34 @@ function Product() {
     return <div>Product not found</div>;
   }
 
-
   return (
     <div style={{
       display: "inline-flex",
     }}>
-      <img src={tshirt} alt="" style={{
+      <img src="/images/example.jpeg" alt={product.name} style={{
         height: "500px",
         width: "400px",
-      }} />
-      <div className='desc' style={
-        {
-          paddingLeft: "200px",
-          paddingTop: "100px",
-        }
-      }>
+      }} /> {/* Updated src */}
+      <div className='desc' style={{
+        paddingLeft: "200px",
+        paddingTop: "100px",
+      }}>
         <h2>{product.name}</h2>
         <p>Price: {product.price} Rs</p>
         <p>
           Material: Cotton <br />
           Size: M <br />
         </p>
-        <Link to='/buy' style={
-          {
-            backgroundColor: "#1E90FF",
-            color: "white",
-            height: "50px",
-            width: "100px",
-            borderRadius: "5px",
-            fontSize: "20px",
-            padding: "0 60px",
-          }
-        }>Buy</Link>
+        <Link to='/buy' style={{
+          backgroundColor: "#1E90FF",
+          color: "white",
+          height: "50px",
+          width: "100px",
+          borderRadius: "5px",
+          fontSize: "20px",
+          padding: "0 60px",
+        }}>Buy</Link>
       </div>
-
-
     </div>
   );
 }
