@@ -4,7 +4,7 @@ function ListItems() {
 
     const [items, setItems] = useState([])
     const getItems = async()=>{
-        const response = await fetch('http://localhost:8080/demo',{
+        const response = await fetch('https://geekchic.onrender.com/demo',{
             method:'GET',
           })
           const data = await response.json()

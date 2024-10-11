@@ -13,7 +13,7 @@ export const ProductsProvider = ({ children }) => {
   useEffect(() => {
     // Fetch products from an API using a GET request and update the state.
     // Replace 'your-api-url' with the actual API endpoint.
-    fetch('http://localhost:8080/products')
+    fetch('https://geekchic.onrender.com/products')
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error('Error fetching products:', error));

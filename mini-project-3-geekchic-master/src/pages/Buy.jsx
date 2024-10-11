@@ -13,7 +13,7 @@ function Buy() {
       };
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://localhost:8080/billing',{
+        const response = await fetch('https://geekchic.onrender.com/billing',{
           method: 'POST',
           body: JSON.stringify(formData),
           headers: {

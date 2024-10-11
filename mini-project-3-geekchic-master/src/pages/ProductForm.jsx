@@ -10,7 +10,7 @@ const ProductForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:8080/products',{
+    const response = await fetch('https://geekchic.onrender.com/products',{
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {

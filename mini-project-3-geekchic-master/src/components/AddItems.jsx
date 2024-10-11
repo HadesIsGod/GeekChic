@@ -25,7 +25,7 @@ function AddItems() {
       price,
       image,
     };
-    const response = await fetch('http://localhost:8080/demo',{
+    const response = await fetch('https://geekchic.onrender.com/demo',{
       method:'POST',
       body:JSON.stringify(productData),
       headers:{
