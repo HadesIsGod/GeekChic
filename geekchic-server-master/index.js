@@ -3,7 +3,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://127.0.0.1:27017/Geekchic')
+mongoose.connect(process.env.DATABASE_URL)
   .then(() => console.log('Connected!'));
 
 const productSchema = new mongoose.Schema({
